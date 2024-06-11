@@ -29,14 +29,14 @@ class Example extends Phaser.Scene {
     preload() {
         this.load.image('background', 'https://play.rosebud.ai/assets/create a dark colour background of a warzone with solders.png?7bSk');
         this.load.image('bottle', 'https://play.rosebud.ai/assets/case.png?5fYH');
-        this.load.image('monkey1', 'https://play.rosebud.ai/assets/create a bob marley image.png?wsh4');
-        this.load.image('monkey2', 'https://play.rosebud.ai/assets/Create a colourful drawing of freddie murcury.png?Rw3e');
-        this.load.image('monkey3', 'https://play.rosebud.ai/assets/create a colourful drawing of Rita Ora.png?qkIX');
-        this.load.image('monkey4', 'https://play.rosebud.ai/assets/create a colourful drawing of Gloria Estefan.png?VaWq');
-        this.load.image('monkey5', 'https://play.rosebud.ai/assets/generate a colourful cartoon image of Jerry springer.png?Oczx');
-        this.load.image('monkey6', 'https://play.rosebud.ai/assets/generate a colourful cartoon image of the singer Mika.png?LYDG');
-        this.load.image('monkey7', 'https://play.rosebud.ai/assets/generate a colourful cartoon image of the singer Wyclef Jean.png?fSEq');
-        this.load.image('monkey8', 'https://play.rosebud.ai/assets/generate a colourful cartoon image of the Albert Einstein.png?Y0rI');
+        this.load.image('monkey1', 'https://play.rosebud.ai/assets/bob.m.png?eI0q');
+        this.load.image('monkey2', 'https://play.rosebud.ai/assets/freddie.m.png?RQXD');
+        this.load.image('monkey3', 'https://play.rosebud.ai/assets/Rita.O.png?mNMa');
+        this.load.image('monkey4', 'https://play.rosebud.ai/assets/gloria.e.png?ntVx');
+        this.load.image('monkey5', 'https://play.rosebud.ai/assets/jerry.png?bWKy');
+        this.load.image('monkey6', 'https://play.rosebud.ai/assets/mika.png?1TmG');
+        this.load.image('monkey7', 'https://play.rosebud.ai/assets/wyclef.j.png?wo3L');
+        this.load.image('monkey8', 'https://play.rosebud.ai/assets/albert-einst.png?JyFE');
         this.load.image('banditYokai', 'https://play.rosebud.ai/assets/create a colourful cartoon angry soldier.png?1Gcb');
 
         this.load.audio('firstSound', 'https://play.rosebud.ai/assets/take-sip-129735.mp3?4Yhw');
@@ -90,7 +90,7 @@ class Example extends Phaser.Scene {
             align: 'center',
             fontWeight: 'bold',
             fontFamily: 'Arial Black',
-            color: '#ADD8E6'
+            color: '#ffffff'
         };
         this.startText = this.add.text(this.sys.game.config.width / 2, 70, "Press ENTER to start.", style).setOrigin(0.5, 0.5);
 
@@ -157,7 +157,7 @@ class Example extends Phaser.Scene {
             align: 'center',
             fontWeight: 'bold',
             fontFamily: 'Arial Black',
-            color: '#ADD8E6'
+            color: '#ffffff'
         };
         let finalScoreText = `Final score: ${this.score} \nRefresh page to reset.`;
         this.add.text(this.sys.game.config.width / 2, 0, finalScoreText, scoreStyle).setOrigin(0.5, 0);
@@ -221,11 +221,12 @@ class Example extends Phaser.Scene {
 
         let message = "Fill my case!";
         let style = {
-            color: '#ffffff',
+            
             fontSize: '22px',
             align: 'center',
             fontWeight: 'bold',
-            fontFamily: 'Arial Black'
+            fontFamily: 'Arial Black',
+            color: '#ffffff',
           
         };
         let textMeasure = this.add.text(0, 0, message, style);
@@ -240,7 +241,7 @@ class Example extends Phaser.Scene {
         rect.setOrigin(0.5, 0.5);
 
         this.thirstyText = this.add.text(this.thirstyMonkey.x, textY, message, style).setOrigin(0.5, 0.5).setDepth(0);
-        this.thirstyText.setColor('#ADD8E6');
+        this.thirstyText.setColor('#ffffff');
         this.thirstyTextBackground = rect;
 
         let percentageStyle = {
@@ -248,7 +249,7 @@ class Example extends Phaser.Scene {
             align: 'center',
             fontWeight: 'bold',
             fontFamily: 'Arial Black',
-            color: '#FFC0CB'
+            color: '#ffffff'
         }; // Light pink color
         let monkeyY = this.thirstyMonkey.originY === 0 ? this.thirstyMonkey.y + this.thirstyMonkey.displayHeight * 0.15 : this.thirstyMonkey.y - this.thirstyMonkey.displayHeight * 0.85;
         this.percentageText = this.add.text(this.thirstyMonkey.x, monkeyY, "", percentageStyle).setOrigin(0.5, 0.5);
@@ -275,11 +276,11 @@ class Example extends Phaser.Scene {
                     alpha: 0.5
                 }
             });
-            this.scoreText = this.add.text(this.sys.game.config.width / 2, 20, `LEVEL / SCORE: ${this.score}`, levelScoreStyle).setOrigin(0.5, 0.5);
+            this.scoreText = this.add.text(this.sys.game.config.width / 2, 20, `CASES PACKED / SCORE: ${this.score}`, levelScoreStyle).setOrigin(0.5, 0.5);
             let scoreBounds = this.scoreText.getBounds();
             this.levelScoreBackground.fillRect(scoreBounds.x - 10, scoreBounds.y - 10, scoreBounds.width + 20, scoreBounds.height + 20);
         } else {
-            this.scoreText.setText(`LEVEL / SCORE: ${this.score}`);
+            this.scoreText.setText(`CASES PACKED / SCORE: ${this.score}`);
             let scoreBounds = this.scoreText.getBounds();
             this.levelScoreBackground.clear();
             this.levelScoreBackground.fillRect(scoreBounds.x - 10, scoreBounds.y - 10, scoreBounds.width + 20, scoreBounds.height + 20);
@@ -347,7 +348,7 @@ class Example extends Phaser.Scene {
                 this.previousThirstyMonkey = this.thirstyMonkey;
                 this.score++; // Increment the score
                 this.banditSpeed += 6; // Increase the bandit's speed
-                this.scoreText.setText(`LEVEL / SCORE: ${this.score}`); // Update the level/score text
+                this.scoreText.setText(`CASES PACKED / SCORE: ${this.score}`); // Update the level/score text
                 this.percentage = 0;
                 this.startGameSequence();
             }
