@@ -37,7 +37,7 @@ class Example extends Phaser.Scene {
         this.load.image('monkey6', 'https://play.rosebud.ai/assets/mika.png?1TmG');
         this.load.image('monkey7', 'https://play.rosebud.ai/assets/wyclef.j.png?wo3L');
         this.load.image('monkey8', 'https://play.rosebud.ai/assets/albert-einst.png?JyFE');
-        this.load.image('banditYokai', 'https://play.rosebud.ai/assets/create a colourful cartoon angry soldier.png?1Gcb');
+        this.load.image('banditYokai', 'https://play.rosebud.ai/assets/soldier.png?nuXg');
 
         this.load.audio('firstSound', 'https://play.rosebud.ai/assets/take-sip-129735.mp3?4Yhw');
         this.load.audio('secondSound', 'https://play.rosebud.ai/assets/take-sip-129735.mp3?4Yhw');
