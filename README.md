@@ -6,6 +6,10 @@ https://vickysug.github.io/help-famous-refugees-pack
 
 ![alt text](images/start.scrn.png)
 
+## Rosebud link:
+
+https://play.rosebud.ai/games/62e5cf8b-0a09-47c3-a612-5219de32b25e
+
 ## End mission:
 Pack all the cases before the soldier gets you.
 
@@ -34,11 +38,11 @@ This project was my 3rd project while on my internship with BIZGEES. The brief:
 Bob Marley, 
 Freddie Mercury, 
 Rita Ora, 
-Gloria Estefan, 
-Jerry Springer, 
+K'Naan, 
+Michaela DePrince, 
 Mika, 
 Wyclef Jean, 
-Albert Eienstein, 
+Ocean Vuong, 
 
 ## Technologies used
 
