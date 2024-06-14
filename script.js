@@ -32,11 +32,11 @@ class Example extends Phaser.Scene {
         this.load.image('monkey1', 'https://play.rosebud.ai/assets/bob.m.png?eI0q');
         this.load.image('monkey2', 'https://play.rosebud.ai/assets/freddie.m.png?RQXD');
         this.load.image('monkey3', 'https://play.rosebud.ai/assets/Rita.O.png?mNMa');
-        this.load.image('monkey4', 'https://play.rosebud.ai/assets/gloria.e.png?ntVx');
-        this.load.image('monkey5', 'https://play.rosebud.ai/assets/jerry.png?bWKy');
+        this.load.image('monkey4', 'https://play.rosebud.ai/assets/Ocean Vuong.png?PdAl');
+        this.load.image('monkey5', 'https://play.rosebud.ai/assets/knann.png?BLBw');
         this.load.image('monkey6', 'https://play.rosebud.ai/assets/mika.png?1TmG');
         this.load.image('monkey7', 'https://play.rosebud.ai/assets/wyclef.j.png?wo3L');
-        this.load.image('monkey8', 'https://play.rosebud.ai/assets/albert-einst.png?JyFE');
+        this.load.image('monkey8', 'https://play.rosebud.ai/assets/Michaela DePrince.png?FUKx');
         this.load.image('banditYokai', 'https://play.rosebud.ai/assets/soldier.png?nuXg');
 
         this.load.audio('firstSound', 'https://play.rosebud.ai/assets/take-sip-129735.mp3?4Yhw');
